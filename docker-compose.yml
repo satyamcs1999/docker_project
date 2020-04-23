@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+        owncloud:
+                image: owncloud:10.0-apache
+                volumes:
+                        - owncloud_storage_new:/var/www/html
+                restart: always
+                depends_on:
+                        - mariadb
+                ports:
+                        - 8080:80
+
+        mariadb:
+               image: mariadb:10.5
+               volumes:
+                       - mariadb_storage_new:/var/lib/mysql
+               restart: always
+               environment:
+                           MYSQL_ROOT_PASSWORD: rootpass
+                           MYSQL_DATABASE: mydb3
+                           MYSQL_USER: satyam
+                           MYSQL_PASSWORD: redhat
+
+
+volumes:
+        owncloud_storage_new:
+        mariadb_storage_new:
+
+
