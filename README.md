@@ -3,3 +3,8 @@ It is a Docker-based project that uses the concept of Infrastructure as a Code t
 It requires Docker images for setup i.e.for frontend, "ownCloud" is used and "MariaDB" database for storage of data. The infrastructure created can be launched using "docker-compose up".
 
 ownCloud is a self-hosted open source file sync and share server. Like Dropbox, Google Drive, Box, and others, ownCloud lets you access your files, calendar, contacts, and other data.
+
+Version used:
+ ownCloud : 10.0-apache
+ MariaDB  : 10.5
+ Docker-Compose : 3
